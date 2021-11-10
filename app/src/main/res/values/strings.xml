@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyLift Express</string>
+    <string name="my_lift">MyLift</string>
+    <string name="express">Express</string>
 </resources>

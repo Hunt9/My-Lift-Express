@@ -10,4 +10,5 @@
     <color name="shimmer_color">#a2878787</color>
     <color name="demo_light_transparent">#16000000</color>
     <color name="default_shimmer_color">#e3e1e3</color>
+    <color name="colorPrimary">#F44336</color>
 </resources>
