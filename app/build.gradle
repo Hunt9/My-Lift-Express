@@ -94,4 +94,8 @@ dependencies {
 
     implementation "com.synnapps:carouselview:0.1.5"
 
+
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
 }

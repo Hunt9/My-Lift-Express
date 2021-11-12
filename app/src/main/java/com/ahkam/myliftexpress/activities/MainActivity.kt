@@ -1,6 +1,7 @@
 
 package com.ahkam.myliftexpress.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -49,7 +50,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startTimer() {
-        Handler(Looper.getMainLooper()).postDelayed({ Toast.makeText(this,"Yeah",Toast.LENGTH_LONG).show() }, 2000)
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this@MainActivity, HomeActivity::class.java))
+            finish()
+        }, 2000)
     }
 
 }
