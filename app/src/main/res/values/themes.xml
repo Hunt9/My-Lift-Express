@@ -13,4 +13,47 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="splashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- colorPrimary is used for coloring the Toolbar -->
+        <item name="colorPrimary">#313335</item>
+
+        <!-- colorPrimaryDark is used for coloring the status bar -->
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated
+             which is used to tint widgets -->
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <!-- Background color for whole app -->
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="materialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- colorPrimary is used for coloring the Toolbar -->
+        <item name="colorPrimary">#313335</item>
+
+        <!-- colorPrimaryDark is used for coloring the status bar -->
+        <item name="colorPrimaryDark">#313335</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated
+             which is used to tint widgets -->
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="materialSharedTransitionTheme" parent="materialTheme">
+        <!-- enable window content transitions -->
+        <item name="android:windowContentTransitions">true</item>
+        <!-- specify shared element transitions -->
+    </style>
 </resources>

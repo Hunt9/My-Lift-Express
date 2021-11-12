@@ -10,8 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLiftExpress">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".activities.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/splashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
