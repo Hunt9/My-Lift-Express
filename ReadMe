@@ -4,6 +4,7 @@ Overview
 * Used SOLID principle approach and clean architecture 
 * Used dependency injection
 * Used kotlin with min API level 21
+* Used Versioning Control i.e. github
 
 Functionalities Done are as follows:
 
