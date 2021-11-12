@@ -1,5 +1,5 @@
 
-package com.ahkam.myliftexpress
+package com.ahkam.myliftexpress.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +10,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import com.ahkam.myliftexpress.R
 import com.ahkam.myliftexpress.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
