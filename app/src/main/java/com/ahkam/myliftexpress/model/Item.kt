@@ -11,6 +11,7 @@ class Item : Serializable {
     var price: Double? = null
     var image: String? = null
     var rating: Rating? = null
+    var quantity: Int = 0
 
     inner class Rating : Serializable {
         var rate: Double? = null

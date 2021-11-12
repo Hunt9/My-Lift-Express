@@ -1,6 +1,5 @@
 package com.ahkam.myliftexpress.adapter
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -10,9 +9,6 @@ import com.ahkam.myliftexpress.R
 import com.ahkam.myliftexpress.databinding.ItemMenuLayoutBinding
 import com.ahkam.myliftexpress.model.Item
 import com.bumptech.glide.Glide
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import java.util.ArrayList
 
 class ItemAdapter(val selectItemListener: (item: Item) -> Unit) :
@@ -49,31 +45,36 @@ class ItemAdapter(val selectItemListener: (item: Item) -> Unit) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Item) {
             binding.ItemName.text = item.title
-//        binding.ItemDescription.text = item.urduName
-//        binding.ItemPrice.text = item.priceKG
-//        binding.ItemUnit.text = item.priceGRAM
-
-            binding.ItemPrice.text = item.price.toString()
+            binding.quantity.text = item.quantity.toString()
+            binding.ItemPrice.text = "Rs." + item.price.toString() + "/="
+            binding.cardRatings.text= "(" + item.rating?.count.toString() + ")"
+            binding.cardRatingIcon.rating = item.rating?.rate?.toFloat()!!
 
             Glide.with(binding.ItemImage.context).load(item.image)
                 .into(binding.ItemImage)
-            Glide.with(binding.thmbnail.context).load(item.image)
-                .into(binding.thmbnail)
 
 
-            binding.CardView.setOnClickListener {
-                binding.CardView.setCardBackgroundColor(
-                    ContextCompat.getColor(
-                        itemView.context,
-                        R.color.green
-                    )
-                )
-                GlobalScope.launch {
+//            binding.CardView.setOnClickListener {
+//                binding.CardView.setCardBackgroundColor(
+//                    ContextCompat.getColor(
+//                        itemView.context,
+//                        R.color.green
+//                    )
+//                )
+//
+//            }
 
-                    binding.ItemPrice.text = "+1 added"
-                    delay(1000)
-                    binding.CardView.setCardBackgroundColor(Color.BLACK)
-//                binding.ItemPrice.text = item.priceKG
+            binding.plus.setOnClickListener{
+
+                item.quantity = item.quantity.plus(1)
+                binding.quantity.text = item.quantity.toString()
+            }
+
+            binding.minus.setOnClickListener{
+                if(item.quantity >= 0)
+                {
+                    item.quantity = item.quantity.minus(1)
+                    binding.quantity.text = item.quantity.toString()
                 }
             }
 

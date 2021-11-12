@@ -89,12 +89,8 @@ class HomeFragment : Fragment() {
         binding.itemList.layoutManager = LinearLayoutManager(activity)
         adapter = ItemAdapter()
         {
-//            val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment()
-//            action.name = it.name.toString()
-//            action.price = it.price.toString()
-//            action.image = it.image_urls?.get(0).toString()
-//
-//            findNavController().navigate(action)
+
+            ItemDetailFragmentBS.newInstance(it).show(childFragmentManager, "")
         }
         binding.itemList.adapter = adapter
         showItem()
