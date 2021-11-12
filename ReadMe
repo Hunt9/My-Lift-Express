@@ -1,0 +1,18 @@
+Overview
+* Design Responsive UI 
+* Used MVVM pattern
+* Used SOLID principle approach and clean architecture 
+* Used dependency injection
+* Used kotlin with min API level 21
+
+Functionalities Done are as follows:
+
+* Consumed API (recommended) using retrofit
+* implement splash screen followed by main listing
+* listing contain most of the data comes from API
+* on click on item a detail popup would appear
+
+Functionality left
+
+* unit testing (Due to time constraints)
+
