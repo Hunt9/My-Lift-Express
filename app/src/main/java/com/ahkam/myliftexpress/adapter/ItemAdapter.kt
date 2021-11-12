@@ -15,11 +15,11 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.ArrayList
 
-class ItemAdapter(val selectItemListener: (item: Item.Results) -> Unit) :
+class ItemAdapter(val selectItemListener: (item: Item) -> Unit) :
     RecyclerView.Adapter<ItemAdapter.MyViewHolder>() {
-    val itemList = ArrayList<Item.Results>()
+    val itemList = ArrayList<Item>()
 
-    fun setList(items: List<Item.Results>) {
+    fun setList(items: List<Item>) {
         itemList.clear()
         itemList.addAll(items)
 
@@ -47,17 +47,17 @@ class ItemAdapter(val selectItemListener: (item: Item.Results) -> Unit) :
 
     inner class MyViewHolder(val binding: ItemMenuLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Item.Results) {
-            binding.ItemName.text = item.name
+        fun bind(item: Item) {
+            binding.ItemName.text = item.title
 //        binding.ItemDescription.text = item.urduName
 //        binding.ItemPrice.text = item.priceKG
 //        binding.ItemUnit.text = item.priceGRAM
 
-            binding.ItemPrice.text = item.price
+            binding.ItemPrice.text = item.price.toString()
 
-            Glide.with(binding.ItemImage.context).load(item.image_urls?.get(0))
+            Glide.with(binding.ItemImage.context).load(item.image)
                 .into(binding.ItemImage)
-            Glide.with(binding.thmbnail.context).load(item.image_urls_thumbnails?.get(0))
+            Glide.with(binding.thmbnail.context).load(item.image)
                 .into(binding.thmbnail)
 
 
