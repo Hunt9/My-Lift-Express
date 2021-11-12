@@ -51,9 +51,4 @@
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="materialSharedTransitionTheme" parent="materialTheme">
-        <!-- enable window content transitions -->
-        <item name="android:windowContentTransitions">true</item>
-        <!-- specify shared element transitions -->
-    </style>
 </resources>
